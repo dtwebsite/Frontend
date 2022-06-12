@@ -104,20 +104,15 @@
             </v-container>
         </v-main>
 
-        <v-footer app padless>
-            <v-col
-                class="text-right text--secondary"
-                cols="12"
-            >
-                <strong class="primary--text text--lighten-1">DTwebsite</strong> © {{ new Date().getFullYear() }}
-            </v-col>
-        </v-footer>
+        <footer-comp></footer-comp>
     </v-app>
 </template>
 
 <script>
-  export default {
+    import FooterComp from '@/components/layouts/FooterComp'
+    export default {
         name: 'ApplicationComp',
+        components: { FooterComp },
         data: () => ({
             drawer: true,
             items: [
